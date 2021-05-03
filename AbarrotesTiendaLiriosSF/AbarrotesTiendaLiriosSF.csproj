@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49D14D96-B1BD-475A-8D10-4605C0E49049}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AbarrotesTiendaLiriosSF</RootNamespace>
+    <AssemblyName>AbarrotesTiendaLiriosSF</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLIENTES\ClienteModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLIENTES\ClienteModificar.Designer.cs">
+      <DependentUpon>ClienteModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLIENTES\ClienteNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLIENTES\ClienteNuevo.Designer.cs">
+      <DependentUpon>ClienteNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCTOS\ProductoConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRODUCTOS\ProductoConsultar.Designer.cs">
+      <DependentUpon>ProductoConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCTOS\ProductoNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRODUCTOS\ProductoNuevo.Designer.cs">
+      <DependentUpon>ProductoNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCTOS\ProductosAgotados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRODUCTOS\ProductosAgotados.Designer.cs">
+      <DependentUpon>ProductosAgotados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCTOS\PtoductosDisponibles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRODUCTOS\PtoductosDisponibles.Designer.cs">
+      <DependentUpon>PtoductosDisponibles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="USUARIOS\IniciarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USUARIOS\IniciarSesion.Designer.cs">
+      <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USUARIOS\UsuarioNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USUARIOS\UsuarioNuevo.Designer.cs">
+      <DependentUpon>UsuarioNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USUARIOS\UsuariosModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USUARIOS\UsuariosModificar.Designer.cs">
+      <DependentUpon>UsuariosModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VENTA\ReporteVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTA\ReporteVenta.Designer.cs">
+      <DependentUpon>ReporteVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VENTA\Vnta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTA\Vnta.Designer.cs">
+      <DependentUpon>Vnta.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CLIENTES\ClienteModificar.resx">
+      <DependentUpon>ClienteModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLIENTES\ClienteNuevo.resx">
+      <DependentUpon>ClienteNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRODUCTOS\ProductoConsultar.resx">
+      <DependentUpon>ProductoConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRODUCTOS\ProductoNuevo.resx">
+      <DependentUpon>ProductoNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRODUCTOS\ProductosAgotados.resx">
+      <DependentUpon>ProductosAgotados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRODUCTOS\PtoductosDisponibles.resx">
+      <DependentUpon>PtoductosDisponibles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="USUARIOS\IniciarSesion.resx">
+      <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USUARIOS\UsuarioNuevo.resx">
+      <DependentUpon>UsuarioNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USUARIOS\UsuariosModificar.resx">
+      <DependentUpon>UsuariosModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTA\ReporteVenta.resx">
+      <DependentUpon>ReporteVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTA\Vnta.resx">
+      <DependentUpon>Vnta.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
