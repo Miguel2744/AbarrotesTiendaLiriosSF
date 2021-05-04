@@ -63,6 +63,12 @@
     <Compile Include="Modulos\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Liz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Liz.Designer.cs">
+      <DependentUpon>Liz.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRODUCTOS\ProductoConsultar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Liz.resx">
+      <DependentUpon>Liz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRODUCTOS\ProductoConsultar.resx">
       <DependentUpon>ProductoConsultar.cs</DependentUpon>
