@@ -59,6 +59,12 @@
       <DependentUpon>ClienteNuevo.cs</DependentUpon>
     </Compile>
     <Compile Include="CONEXION\CONEXION.cs" />
+    <Compile Include="Modulos\elba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\elba.Designer.cs">
+      <DependentUpon>elba.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
