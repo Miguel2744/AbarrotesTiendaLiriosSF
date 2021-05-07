@@ -122,5 +122,10 @@ namespace AbarrotesTiendaLiriosSF
         {
             //AbrirFormEnPanel(new Modulos.ejemploconexion());
         }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
