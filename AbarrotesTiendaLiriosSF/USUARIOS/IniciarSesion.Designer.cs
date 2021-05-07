@@ -55,7 +55,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.Gray;
             this.panel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel6.Location = new System.Drawing.Point(291, 365);
+            this.panel6.Location = new System.Drawing.Point(291, 382);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(237, 1);
             this.panel6.TabIndex = 641;
@@ -63,19 +63,19 @@
             // txtlogin
             // 
             this.txtlogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtlogin.Location = new System.Drawing.Point(291, 346);
+            this.txtlogin.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F);
+            this.txtlogin.Location = new System.Drawing.Point(291, 356);
             this.txtlogin.Name = "txtlogin";
-            this.txtlogin.Size = new System.Drawing.Size(237, 19);
+            this.txtlogin.Size = new System.Drawing.Size(237, 24);
             this.txtlogin.TabIndex = 639;
             // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(291, 307);
+            this.textBox1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F);
+            this.textBox1.Location = new System.Drawing.Point(291, 305);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(237, 19);
+            this.textBox1.Size = new System.Drawing.Size(237, 24);
             this.textBox1.TabIndex = 640;
             // 
             // pictureBox1
@@ -103,22 +103,22 @@
             // 
             this.Label5.AutoSize = true;
             this.Label5.BackColor = System.Drawing.Color.Transparent;
-            this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label5.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F);
             this.Label5.ForeColor = System.Drawing.Color.Black;
-            this.Label5.Location = new System.Drawing.Point(188, 356);
+            this.Label5.Location = new System.Drawing.Point(123, 354);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(96, 20);
+            this.Label5.Size = new System.Drawing.Size(153, 26);
             this.Label5.TabIndex = 637;
             this.Label5.Text = "Contraseña:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(264, 245);
+            this.label3.Location = new System.Drawing.Point(228, 247);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(264, 15);
+            this.label3.Size = new System.Drawing.Size(326, 19);
             this.label3.TabIndex = 635;
             this.label3.Text = "Por favor, rellene los sigueintes campos";
             // 
@@ -126,11 +126,11 @@
             // 
             this.Label8.AutoSize = true;
             this.Label8.BackColor = System.Drawing.Color.Transparent;
-            this.Label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label8.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F);
             this.Label8.ForeColor = System.Drawing.Color.Black;
-            this.Label8.Location = new System.Drawing.Point(204, 312);
+            this.Label8.Location = new System.Drawing.Point(142, 300);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(68, 20);
+            this.Label8.Size = new System.Drawing.Size(110, 26);
             this.Label8.TabIndex = 636;
             this.Label8.Text = "Usuario:";
             // 
@@ -138,7 +138,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 9);
+            this.label2.Location = new System.Drawing.Point(45, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 26);
             this.label2.TabIndex = 633;

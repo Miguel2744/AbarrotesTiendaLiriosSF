@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,17 +58,18 @@
     <Compile Include="CLIENTES\ClienteNuevo.Designer.cs">
       <DependentUpon>ClienteNuevo.cs</DependentUpon>
     </Compile>
+    <Compile Include="CONEXION\CONEXION.cs" />
+    <Compile Include="Modulos\ejemploconexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\ejemploconexion.Designer.cs">
+      <DependentUpon>ejemploconexion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulos\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modulos\Liz.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulos\Liz.Designer.cs">
-      <DependentUpon>Liz.cs</DependentUpon>
     </Compile>
     <Compile Include="PRODUCTOS\ProductoConsultar.cs">
       <SubType>Form</SubType>
@@ -131,11 +133,11 @@
     <EmbeddedResource Include="CLIENTES\ClienteNuevo.resx">
       <DependentUpon>ClienteNuevo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\ejemploconexion.resx">
+      <DependentUpon>ejemploconexion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modulos\Liz.resx">
-      <DependentUpon>Liz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRODUCTOS\ProductoConsultar.resx">
       <DependentUpon>ProductoConsultar.cs</DependentUpon>
