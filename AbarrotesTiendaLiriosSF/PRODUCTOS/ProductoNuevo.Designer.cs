@@ -33,17 +33,17 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtExistencias = new System.Windows.Forms.TextBox();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtCosto = new System.Windows.Forms.TextBox();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtTipo = new System.Windows.Forms.TextBox();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -63,6 +63,7 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 673;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // label26
             // 
@@ -97,14 +98,14 @@
             this.pictureBox7.TabIndex = 670;
             this.pictureBox7.TabStop = false;
             // 
-            // textBox11
+            // txtDescripcion
             // 
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox11.Location = new System.Drawing.Point(233, 229);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(238, 84);
-            this.textBox11.TabIndex = 669;
+            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtDescripcion.Location = new System.Drawing.Point(233, 229);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(238, 84);
+            this.txtDescripcion.TabIndex = 669;
             // 
             // panel16
             // 
@@ -115,15 +116,15 @@
             this.panel16.Size = new System.Drawing.Size(237, 1);
             this.panel16.TabIndex = 668;
             // 
-            // textBox13
+            // txtExistencias
             // 
-            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(234, 389);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(237, 19);
-            this.textBox13.TabIndex = 662;
+            this.txtExistencias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtExistencias.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtExistencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtExistencias.Location = new System.Drawing.Point(234, 389);
+            this.txtExistencias.Name = "txtExistencias";
+            this.txtExistencias.Size = new System.Drawing.Size(237, 19);
+            this.txtExistencias.TabIndex = 662;
             // 
             // panel15
             // 
@@ -134,15 +135,15 @@
             this.panel15.Size = new System.Drawing.Size(237, 1);
             this.panel15.TabIndex = 665;
             // 
-            // textBox12
+            // txtCosto
             // 
-            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(234, 338);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(237, 19);
-            this.textBox12.TabIndex = 663;
+            this.txtCosto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtCosto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCosto.Location = new System.Drawing.Point(234, 338);
+            this.txtCosto.Name = "txtCosto";
+            this.txtCosto.Size = new System.Drawing.Size(237, 19);
+            this.txtCosto.TabIndex = 663;
             // 
             // panel14
             // 
@@ -153,15 +154,15 @@
             this.panel14.Size = new System.Drawing.Size(237, 1);
             this.panel14.TabIndex = 664;
             // 
-            // textBox10
+            // txtTipo
             // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(234, 177);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(237, 19);
-            this.textBox10.TabIndex = 661;
+            this.txtTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtTipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipo.Location = new System.Drawing.Point(234, 177);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(237, 19);
+            this.txtTipo.TabIndex = 661;
             // 
             // panel17
             // 
@@ -172,15 +173,15 @@
             this.panel17.Size = new System.Drawing.Size(237, 1);
             this.panel17.TabIndex = 666;
             // 
-            // textBox14
+            // txtMarca
             // 
-            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(234, 135);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(237, 19);
-            this.textBox14.TabIndex = 660;
+            this.txtMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMarca.Location = new System.Drawing.Point(234, 135);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(237, 19);
+            this.txtMarca.TabIndex = 660;
             // 
             // panel13
             // 
@@ -191,15 +192,15 @@
             this.panel13.Size = new System.Drawing.Size(237, 1);
             this.panel13.TabIndex = 667;
             // 
-            // textBox9
+            // txtNombre
             // 
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(236, 96);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(237, 19);
-            this.textBox9.TabIndex = 659;
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(236, 96);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(237, 19);
+            this.txtNombre.TabIndex = 659;
             // 
             // label24
             // 
@@ -273,17 +274,17 @@
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.panel16);
-            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.txtExistencias);
             this.Controls.Add(this.panel15);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.txtCosto);
             this.Controls.Add(this.panel14);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.panel17);
-            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.panel13);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label22);
@@ -306,17 +307,17 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtExistencias;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtCosto;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
