@@ -51,7 +51,6 @@
             this.cONSULTARMODIFICARELIMINARCLIENTEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menuStrip4.SuspendLayout();
             this.menuStrip3.SuspendLayout();
@@ -62,7 +61,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(158)))), ((int)(((byte)(233)))));
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.menuStrip4);
             this.panel1.Controls.Add(this.menuStrip3);
             this.panel1.Controls.Add(this.button1);
@@ -277,16 +275,6 @@
             this.panelContenedor.TabIndex = 6;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(594, 26);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(59, 34);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,7 +328,6 @@
         private System.Windows.Forms.ToolStripMenuItem cONSULTARMODIFICARELIMINARCLIENTEToolStripMenuItem;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelContenedor;
-        private System.Windows.Forms.Button button2;
     }
 }
 

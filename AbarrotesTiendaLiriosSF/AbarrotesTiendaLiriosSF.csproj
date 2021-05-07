@@ -59,12 +59,6 @@
       <DependentUpon>ClienteNuevo.cs</DependentUpon>
     </Compile>
     <Compile Include="CONEXION\CONEXION.cs" />
-    <Compile Include="Modulos\ejemploconexion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulos\ejemploconexion.Designer.cs">
-      <DependentUpon>ejemploconexion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Modulos\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,9 +126,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CLIENTES\ClienteNuevo.resx">
       <DependentUpon>ClienteNuevo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modulos\ejemploconexion.resx">
-      <DependentUpon>ejemploconexion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
