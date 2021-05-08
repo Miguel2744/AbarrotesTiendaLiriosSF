@@ -31,23 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuariosModificar));
             this.menuStrip5 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboRol = new System.Windows.Forms.ComboBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.ComboBox();
             this.menuStrip5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -72,15 +72,7 @@
             this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(28, 31);
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.Color.Silver;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(101, 95);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(405, 26);
-            this.textBox8.TabIndex = 669;
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // pictureBox6
             // 
@@ -112,18 +104,18 @@
             this.pictureBox4.TabIndex = 666;
             this.pictureBox4.TabStop = false;
             // 
-            // comboBox1
+            // comboRol
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.Silver;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboRol.BackColor = System.Drawing.Color.Silver;
+            this.comboRol.FormattingEnabled = true;
+            this.comboRol.Items.AddRange(new object[] {
             "Solo Ventas (no esta autorizado para manejar dinero)",
             "Cajero (Si esta autorizado para manejar dinero)",
             "Administrador (Control total)"});
-            this.comboBox1.Location = new System.Drawing.Point(204, 317);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(282, 21);
-            this.comboBox1.TabIndex = 665;
+            this.comboRol.Location = new System.Drawing.Point(204, 317);
+            this.comboRol.Name = "comboRol";
+            this.comboRol.Size = new System.Drawing.Size(282, 21);
+            this.comboRol.TabIndex = 665;
             // 
             // panel10
             // 
@@ -153,15 +145,15 @@
             this.panel11.Size = new System.Drawing.Size(237, 1);
             this.panel11.TabIndex = 663;
             // 
-            // textBox6
+            // txtPass
             // 
-            this.textBox6.BackColor = System.Drawing.Color.Silver;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(220, 206);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(237, 19);
-            this.textBox6.TabIndex = 660;
+            this.txtPass.BackColor = System.Drawing.Color.Silver;
+            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(220, 206);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(237, 19);
+            this.txtPass.TabIndex = 660;
             // 
             // panel12
             // 
@@ -172,15 +164,15 @@
             this.panel12.Size = new System.Drawing.Size(237, 1);
             this.panel12.TabIndex = 664;
             // 
-            // textBox7
+            // txtNombre
             // 
-            this.textBox7.BackColor = System.Drawing.Color.Silver;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(223, 147);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(237, 19);
-            this.textBox7.TabIndex = 661;
+            this.txtNombre.BackColor = System.Drawing.Color.Silver;
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(223, 147);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(237, 19);
+            this.txtNombre.TabIndex = 661;
             // 
             // label15
             // 
@@ -244,24 +236,33 @@
             this.label12.TabIndex = 652;
             this.label12.Text = "usuario ";
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.Color.Silver;
+            this.txtBuscar.FormattingEnabled = true;
+            this.txtBuscar.Location = new System.Drawing.Point(220, 100);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(298, 21);
+            this.txtBuscar.TabIndex = 671;
+            // 
             // UsuariosModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(693, 495);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.menuStrip5);
-            this.Controls.Add(this.textBox8);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboRol);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.panel11);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.panel12);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label17);
@@ -272,6 +273,7 @@
             this.Name = "UsuariosModificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UsuariosModificar";
+            this.Load += new System.EventHandler(this.UsuariosModificar_Load);
             this.menuStrip5.ResumeLayout(false);
             this.menuStrip5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -286,22 +288,22 @@
 
         private System.Windows.Forms.MenuStrip menuStrip5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboRol;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox txtBuscar;
     }
 }

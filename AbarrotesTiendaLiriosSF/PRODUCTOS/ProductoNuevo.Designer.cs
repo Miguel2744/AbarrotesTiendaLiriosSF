@@ -39,7 +39,6 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.txtCosto = new System.Windows.Forms.TextBox();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.txtTipo = new System.Windows.Forms.TextBox();
             this.panel17 = new System.Windows.Forms.Panel();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -50,6 +49,7 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.txtTipoP = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
@@ -154,16 +154,6 @@
             this.panel14.Size = new System.Drawing.Size(237, 1);
             this.panel14.TabIndex = 664;
             // 
-            // txtTipo
-            // 
-            this.txtTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtTipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipo.Location = new System.Drawing.Point(234, 177);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(237, 19);
-            this.txtTipo.TabIndex = 661;
-            // 
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Gray;
@@ -264,12 +254,30 @@
             this.label19.TabIndex = 653;
             this.label19.Text = "Producto Nuevo";
             // 
+            // txtTipoP
+            // 
+            this.txtTipoP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtTipoP.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 12F);
+            this.txtTipoP.FormattingEnabled = true;
+            this.txtTipoP.Items.AddRange(new object[] {
+            "Canasta Basica",
+            "Aseo Personal",
+            "Dulceria",
+            "Bebidas",
+            "Bebidas Alcoholicas",
+            "Condimentos"});
+            this.txtTipoP.Location = new System.Drawing.Point(234, 177);
+            this.txtTipoP.Name = "txtTipoP";
+            this.txtTipoP.Size = new System.Drawing.Size(242, 26);
+            this.txtTipoP.TabIndex = 674;
+            // 
             // ProductoNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(677, 456);
+            this.Controls.Add(this.txtTipoP);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
@@ -280,7 +288,6 @@
             this.Controls.Add(this.panel15);
             this.Controls.Add(this.txtCosto);
             this.Controls.Add(this.panel14);
-            this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.panel17);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.panel13);
@@ -313,7 +320,6 @@
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.TextBox txtCosto;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Panel panel13;
@@ -324,5 +330,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ComboBox txtTipoP;
     }
 }

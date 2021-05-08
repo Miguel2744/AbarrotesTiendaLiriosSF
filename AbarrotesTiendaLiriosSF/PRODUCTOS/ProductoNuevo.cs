@@ -28,7 +28,7 @@ namespace AbarrotesTiendaLiriosSF.PRODUCTOS
                 //genero mis variables auxiliares para recibir los datos de los textbox
                 String nom_producto = txtNombre.Text;
                 String marca = txtMarca.Text;
-                String tipoP = txtTipo.Text;
+                String tipoP = txtTipoP.Text;
                 String descripcion = txtDescripcion.Text;
                 Double costo = Convert.ToDouble(txtCosto.Text);
                 int existencias = Convert.ToInt32(txtExistencias.Text);
