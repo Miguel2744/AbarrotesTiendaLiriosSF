@@ -40,10 +40,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,9 +57,9 @@
             this.Tipo,
             this.Costo,
             this.Existencias});
-            this.dataGridView1.Location = new System.Drawing.Point(43, 131);
+            this.dataGridView1.Location = new System.Drawing.Point(69, 107);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(545, 154);
+            this.dataGridView1.Size = new System.Drawing.Size(546, 341);
             this.dataGridView1.TabIndex = 686;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -95,7 +93,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(39, 93);
+            this.label2.Location = new System.Drawing.Point(65, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(307, 21);
             this.label2.TabIndex = 685;
@@ -105,11 +103,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Elephant", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(38, 45);
+            this.label1.Location = new System.Drawing.Point(63, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 27);
+            this.label1.Size = new System.Drawing.Size(278, 33);
             this.label1.TabIndex = 687;
             this.label1.Text = "Reporte De Venta\r\n";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -119,7 +117,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(447, 380);
+            this.label6.Location = new System.Drawing.Point(594, 451);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(21, 21);
             this.label6.TabIndex = 694;
@@ -130,21 +128,11 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(292, 380);
+            this.label4.Location = new System.Drawing.Point(439, 451);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(149, 21);
             this.label4.TabIndex = 693;
             this.label4.Text = "Venta total del dia";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(492, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(179, 191);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 695;
-            this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -162,19 +150,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(693, 495);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReporteVenta";
             this.Text = "ReporteVenta";
             this.Load += new System.EventHandler(this.ReporteVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -193,7 +179,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

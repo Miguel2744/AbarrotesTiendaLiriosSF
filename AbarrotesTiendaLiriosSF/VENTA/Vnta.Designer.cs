@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vnta));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label19 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
@@ -51,6 +49,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -63,37 +62,18 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Navy;
-            this.label19.Location = new System.Drawing.Point(34, 9);
+            this.label19.Location = new System.Drawing.Point(70, 18);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(102, 33);
             this.label19.TabIndex = 656;
             this.label19.Text = "Venta";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Gray;
-            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(296, 75);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(237, 1);
-            this.panel4.TabIndex = 678;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(296, 51);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(237, 19);
-            this.textBox2.TabIndex = 677;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Navy;
-            this.label7.Location = new System.Drawing.Point(27, 51);
+            this.label7.Location = new System.Drawing.Point(72, 59);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(263, 21);
             this.label7.TabIndex = 676;
@@ -105,7 +85,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(36, 99);
+            this.label1.Location = new System.Drawing.Point(72, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 21);
             this.label1.TabIndex = 679;
@@ -113,17 +93,17 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(141, 99);
+            this.numericUpDown2.Location = new System.Drawing.Point(160, 96);
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(73, 20);
+            this.numericUpDown2.Size = new System.Drawing.Size(415, 20);
             this.numericUpDown2.TabIndex = 681;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(257, 83);
+            this.pictureBox1.Location = new System.Drawing.Point(581, 88);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 37);
+            this.pictureBox1.Size = new System.Drawing.Size(33, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 682;
             this.pictureBox1.TabStop = false;
@@ -133,7 +113,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(36, 137);
+            this.label2.Location = new System.Drawing.Point(72, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 21);
             this.label2.TabIndex = 683;
@@ -141,8 +121,8 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Silver;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -151,9 +131,9 @@
             this.Tipo,
             this.Costo,
             this.Existencias});
-            this.dataGridView1.Location = new System.Drawing.Point(54, 161);
+            this.dataGridView1.Location = new System.Drawing.Point(76, 161);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(545, 154);
+            this.dataGridView1.Size = new System.Drawing.Size(538, 154);
             this.dataGridView1.TabIndex = 684;
             // 
             // Nombre
@@ -186,7 +166,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(50, 329);
+            this.label3.Location = new System.Drawing.Point(72, 329);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(265, 21);
             this.label3.TabIndex = 685;
@@ -196,9 +176,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(98, 353);
+            this.pictureBox2.Location = new System.Drawing.Point(172, 353);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(88, 65);
+            this.pictureBox2.Size = new System.Drawing.Size(50, 46);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 686;
             this.pictureBox2.TabStop = false;
@@ -208,7 +188,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Elephant", 12F);
             this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(126, 430);
+            this.label5.Location = new System.Drawing.Point(184, 402);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(25, 21);
             this.label5.TabIndex = 688;
@@ -224,7 +204,7 @@
             "Liz Toxica ",
             "Wally Manco",
             "Huguo"});
-            this.txtrol.Location = new System.Drawing.Point(40, 454);
+            this.txtrol.Location = new System.Drawing.Point(76, 426);
             this.txtrol.Name = "txtrol";
             this.txtrol.Size = new System.Drawing.Size(261, 29);
             this.txtrol.TabIndex = 689;
@@ -233,9 +213,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(458, 379);
+            this.pictureBox3.Location = new System.Drawing.Point(559, 440);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(121, 90);
+            this.pictureBox3.Size = new System.Drawing.Size(55, 43);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 690;
             this.pictureBox3.TabStop = false;
@@ -246,7 +226,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(413, 343);
+            this.label4.Location = new System.Drawing.Point(523, 402);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 21);
             this.label4.TabIndex = 691;
@@ -258,12 +238,21 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(482, 343);
+            this.label6.Location = new System.Drawing.Point(592, 402);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(21, 21);
             this.label6.TabIndex = 692;
             this.label6.Text = "$";
             this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.Color.Silver;
+            this.txtBuscar.FormattingEnabled = true;
+            this.txtBuscar.Location = new System.Drawing.Point(329, 61);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(285, 21);
+            this.txtBuscar.TabIndex = 693;
             // 
             // Vnta
             // 
@@ -271,6 +260,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(693, 495);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox3);
@@ -283,8 +273,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label19);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -304,8 +292,6 @@
         #endregion
 
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
@@ -324,5 +310,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox txtBuscar;
     }
 }
