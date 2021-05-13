@@ -23,7 +23,7 @@ namespace AbarrotesTiendaLiriosSF.PRODUCTOS
         {
             MySqlConnection Conexion = new MySqlConnection();
             String Cadenaconexion;
-            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
+            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
 
 
@@ -59,7 +59,7 @@ namespace AbarrotesTiendaLiriosSF.PRODUCTOS
                 //genero mis variables auxiliares para recibir los datos de los textbox
                 String nombre = txtBuscar.Text;
                 //especifico los datos sobre mi conexion y se los evnio al objeto conexion de mysql
-                Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
+                Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
                 Conexion.ConnectionString = Cadenaconexion;
 
                 //Creo un objeto comand el cual tendra el query de la instruccion de Insercion
@@ -101,6 +101,111 @@ namespace AbarrotesTiendaLiriosSF.PRODUCTOS
 
         }
 
+        private void btnEliminarProducto_Click(object sender, EventArgs e)
+        {
+            DialogResult opcion;
+            opcion = MessageBox.Show("Estas seguro de eliminar los datos?", "Advertencia", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+            if (opcion == DialogResult.No)
+            {
+                MessageBox.Show("Datos no Eliminados");
+            }
+            MySqlConnection Conexion = new MySqlConnection();
+            String Cadenaconexion;
+            String nombre = txtNombre.Text;
+
+            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Conexion.ConnectionString = Cadenaconexion;
+
+            MySqlCommand comando1 = new MySqlCommand("delete from producto where nom_producto=(@nombre)");
+            comando1.Connection = Conexion;
+
+
+            MySqlParameter parametro1 = new MySqlParameter();
+            parametro1.ParameterName = "@nombre";
+            parametro1.Value = nombre;
+            comando1.Parameters.Add(parametro1);
+
+
+            if (opcion == DialogResult.Yes)
+            //opciones que quieras realizar
+            {
+                try
+                {
+                    Conexion.Open();
+                    comando1.ExecuteNonQuery();
+                    MessageBox.Show("Datos de " + txtNombre.Text + " Eliminados!");
+
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show("Se ha producido un error" + err + "");
+                }
+                Conexion.Close();
+            }
         }
+
+        private void btnGuardarProducto_Click(object sender, EventArgs e)
+        {
+            MySqlConnection Conexion = new MySqlConnection();
+            String Cadenaconexion;
+            //genero mis variables auxiliares para recibir los datos de los textbox
+            String nombre = txtNombre.Text;
+            String marca = txtMarca.Text;
+            String tipo = txtTipoP.Text;
+            String descripcion = txtDescripcion.Text;
+            String costo = txtCosto.Text;
+            String existencias = txtExistencias.Text;
+
+            //especifico los datos sobre mi conexion y se los evnio al objeto conexion de mysql
+            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Conexion.ConnectionString = Cadenaconexion;
+
+            //Creo un objeto comand el cual tendra el query de la instruccion de Insercion
+            MySqlCommand comando1 = new MySqlCommand(
+            "update producto set nom_producto=(@nombre), marca=(@marca), tipoP=(@tipo), descripcion=(@descripcion), costo=(@costo), existencias=(@existencias) where nom_producto=(@nombre)");
+            comando1.Connection = Conexion;
+            //genero un objeto parametro y agrego al objeto lo que tiene el textbox(para eso utilizamos la variable aux nombre)
+
+
+            MySqlParameter parametro1 = new MySqlParameter();
+            parametro1.ParameterName = "@nombre";
+            parametro1.Value = nombre;
+            MySqlParameter parametro2 = new MySqlParameter();
+            parametro2.ParameterName = "@marca";
+            parametro2.Value = marca;
+            MySqlParameter parametro3 = new MySqlParameter();
+            parametro3.ParameterName = "@tipo";
+            parametro3.Value = tipo;
+            MySqlParameter parametro4 = new MySqlParameter();
+            parametro4.ParameterName = "@descripcion";
+            parametro4.Value = descripcion;
+            MySqlParameter parametro5 = new MySqlParameter();
+            parametro5.ParameterName = "@costo";
+            parametro5.Value = costo;
+            MySqlParameter parametro6 = new MySqlParameter();
+            parametro6.ParameterName = "@existencias";
+            parametro6.Value = existencias;
+
+            comando1.Parameters.Add(parametro1);
+            comando1.Parameters.Add(parametro2);
+            comando1.Parameters.Add(parametro3);
+            comando1.Parameters.Add(parametro4);
+            comando1.Parameters.Add(parametro5);
+            comando1.Parameters.Add(parametro6);
+
+            try
+            {
+                Conexion.Open();
+                comando1.ExecuteNonQuery();
+                MessageBox.Show("Datos modificados con exito");
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Se ha producido un error" + err + "");
+            }
+            Conexion.Close();
+        }
+    }
     }
 

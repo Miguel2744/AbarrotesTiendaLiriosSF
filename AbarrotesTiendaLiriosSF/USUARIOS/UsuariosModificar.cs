@@ -33,7 +33,7 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
                 //genero mis variables auxiliares para recibir los datos de los textbox
                 String nombre = txtBuscar.Text;
                 //especifico los datos sobre mi conexion y se los evnio al objeto conexion de mysql
-                Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
+                Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
                 Conexion.ConnectionString = Cadenaconexion;
 
                 //Creo un objeto comand el cual tendra el query de la instruccion de Insercion
@@ -71,11 +71,12 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
             }
         }
 
+
         private void UsuariosModificar_Load(object sender, EventArgs e)
         {
             MySqlConnection Conexion = new MySqlConnection();
             String Cadenaconexion;
-            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
+            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
 
 
@@ -87,6 +88,111 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
                 txtBuscar.Items.Add(registro["nom_User"].ToString());
             }
             Conexion.Close();
+        }
+
+        private void btnGuardarUsuario_Click(object sender, EventArgs e)
+        {
+            MySqlConnection Conexion = new MySqlConnection();
+            String Cadenaconexion;
+            //genero mis variables auxiliares para recibir los datos de los textbox
+            String nombre = txtNombre.Text;
+            String rol = comboRol.Text;
+            String password = txtPass.Text;
+            String newPass = txtPassNueva.Text;
+            String newNombre = txtNombreNuevo.Text;
+
+            //especifico los datos sobre mi conexion y se los evnio al objeto conexion de mysql
+            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Conexion.ConnectionString = Cadenaconexion;
+
+            //Creo un objeto comand el cual tendra el query de la instruccion de Insercion
+            MySqlCommand comando1 = new MySqlCommand("update usuarios set nom_User=(@nombreNuevo), Pass=(@passNueva),tipo=(@tipo) where nom_User=(@nombre) and Pass=(@pass)");
+            comando1.Connection = Conexion;
+            //genero un objeto parametro y agrego al objeto lo que tiene el textbox(para eso utilizamos la variable aux nombre)
+
+
+            MySqlParameter parametro1 = new MySqlParameter();
+            parametro1.ParameterName = "@nombre";
+            parametro1.Value = nombre;
+            MySqlParameter parametro2 = new MySqlParameter();
+            parametro2.ParameterName = "@pass";
+            parametro2.Value = password;
+            MySqlParameter parametro3 = new MySqlParameter();
+            parametro3.ParameterName = "@tipo";
+            parametro3.Value = rol;
+            MySqlParameter parametro4 = new MySqlParameter();
+            parametro4.ParameterName = "@passNueva";
+            parametro4.Value = newPass;
+            MySqlParameter parametro5 = new MySqlParameter();
+            parametro5.ParameterName = "@nombreNuevo";
+            parametro5.Value = newNombre;
+
+            comando1.Parameters.Add(parametro1);
+            comando1.Parameters.Add(parametro2);
+            comando1.Parameters.Add(parametro3);
+            comando1.Parameters.Add(parametro4);
+            comando1.Parameters.Add(parametro5);
+
+            try
+            {
+                Conexion.Open();
+                comando1.ExecuteNonQuery();
+                MessageBox.Show("Datos modificados con exito");
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Se ha producido un error" + err + "");
+            }
+            Conexion.Close();
+        }
+
+        private void btnEliminarUsuario_Click(object sender, EventArgs e)
+        {
+            DialogResult opcion;
+            opcion = MessageBox.Show("Estas seguro de eliminar los datos?", "Advertencia", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+            if (opcion == DialogResult.No)
+            {
+                MessageBox.Show("Datos no Eliminados");
+            }
+            MySqlConnection Conexion = new MySqlConnection();
+            String Cadenaconexion;
+            String nombre = txtNombre.Text;
+            String password = txtPass.Text;
+            
+            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Conexion.ConnectionString = Cadenaconexion;
+            
+            MySqlCommand comando1 = new MySqlCommand("delete from usuarios where nom_User=(@nombre) and Pass=(@pass)");
+            comando1.Connection = Conexion;
+
+
+            MySqlParameter parametro1 = new MySqlParameter();
+            parametro1.ParameterName = "@nombre";
+            parametro1.Value = nombre;
+            MySqlParameter parametro2 = new MySqlParameter();
+            parametro2.ParameterName = "@pass";
+            parametro2.Value = password;
+            comando1.Parameters.Add(parametro1);
+            comando1.Parameters.Add(parametro2);
+
+
+            if (opcion == DialogResult.Yes)
+            //opciones que quieras realizar
+            {
+                try
+                {
+                    Conexion.Open();
+                    comando1.ExecuteNonQuery();
+                    MessageBox.Show("Datos de " + txtNombre.Text + " Eliminados!");
+
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show("Se ha producido un error" + err + "");
+                }
+                Conexion.Close();
+            }
         }
     }
 }

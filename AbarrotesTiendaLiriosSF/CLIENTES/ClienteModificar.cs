@@ -134,5 +134,101 @@ namespace AbarrotesTiendaLiriosSF.CLIENTES
         {
 
         }
+
+        private void btnEliminarCliente_Click(object sender, EventArgs e)
+        {
+            DialogResult opcion;
+            opcion = MessageBox.Show("Estas seguro de eliminar los datos?", "Advertencia", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+            if (opcion == DialogResult.No)
+            {
+                MessageBox.Show("Datos no Eliminados");
+            }
+            MySqlConnection Conexion = new MySqlConnection();
+            String Cadenaconexion;
+            String nombre = txtNombre.Text;
+
+            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Conexion.ConnectionString = Cadenaconexion;
+
+            MySqlCommand comando1 = new MySqlCommand("delete from cliente where nombre=(@nombre)");
+            comando1.Connection = Conexion;
+
+
+            MySqlParameter parametro1 = new MySqlParameter();
+            parametro1.ParameterName = "@nombre";
+            parametro1.Value = nombre;
+            comando1.Parameters.Add(parametro1);
+
+
+            if (opcion == DialogResult.Yes)
+            //opciones que quieras realizar
+            {
+                try
+                {
+                    Conexion.Open();
+                    comando1.ExecuteNonQuery();
+                    MessageBox.Show("Datos de " + txtNombre.Text + " Eliminados!");
+
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show("Se ha producido un error" + err + "");
+                }
+                Conexion.Close();
+            }
+        }
+
+        private void btnGuardarCliente_Click(object sender, EventArgs e)
+        {
+            MySqlConnection Conexion = new MySqlConnection();
+            String Cadenaconexion;
+            String nombre = txtNombre.Text;
+            String apodo = txtApodo.Text;
+            String telefono = txtTelefono.Text;
+            String saldo = txtSaldo.Text;
+            String desc = txtDescripcion.Text;
+            
+            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Conexion.ConnectionString = Cadenaconexion;
+            
+            MySqlCommand comando1 = new MySqlCommand(
+            "update cliente set nombre=(@nombre), alias=(@apodo), telefono=(@tel), saldo=(@saldo), descripcion=(@desc) where nombre=(@nombre)");
+            comando1.Connection = Conexion;
+
+            MySqlParameter parametro1 = new MySqlParameter();
+            parametro1.ParameterName = "@nombre";
+            parametro1.Value = nombre;
+            MySqlParameter parametro2 = new MySqlParameter();
+            parametro2.ParameterName = "@apodo";
+            parametro2.Value = apodo;
+            MySqlParameter parametro3 = new MySqlParameter();
+            parametro3.ParameterName = "@tel";
+            parametro3.Value = telefono;
+            MySqlParameter parametro4 = new MySqlParameter();
+            parametro4.ParameterName = "@saldo";
+            parametro4.Value = saldo;
+            MySqlParameter parametro5 = new MySqlParameter();
+            parametro5.ParameterName = "@desc";
+            parametro5.Value = desc;
+
+            comando1.Parameters.Add(parametro1);
+            comando1.Parameters.Add(parametro2);
+            comando1.Parameters.Add(parametro3);
+            comando1.Parameters.Add(parametro4);
+            comando1.Parameters.Add(parametro5);
+
+            try
+            {
+                Conexion.Open();
+                comando1.ExecuteNonQuery();
+                MessageBox.Show("Datos modificados con exito");
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Se ha producido un error" + err + "");
+            }
+            Conexion.Close();
+        }
     }
 }
