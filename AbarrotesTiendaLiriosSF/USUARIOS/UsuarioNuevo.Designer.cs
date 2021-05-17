@@ -71,7 +71,7 @@
             // 
             // txtrol
             // 
-            this.txtrol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtrol.BackColor = System.Drawing.Color.Silver;
             this.txtrol.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 12F);
             this.txtrol.FormattingEnabled = true;
             this.txtrol.Items.AddRange(new object[] {
@@ -93,7 +93,7 @@
             // 
             // txtVerificar
             // 
-            this.txtVerificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtVerificar.BackColor = System.Drawing.Color.Silver;
             this.txtVerificar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtVerificar.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 12F);
             this.txtVerificar.Location = new System.Drawing.Point(219, 268);
@@ -122,17 +122,18 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtNombre.BackColor = System.Drawing.Color.Silver;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 12F);
             this.txtNombre.Location = new System.Drawing.Point(219, 144);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(374, 19);
             this.txtNombre.TabIndex = 644;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtContraseña
             // 
-            this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtContraseña.BackColor = System.Drawing.Color.Silver;
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 12F);
             this.txtContraseña.Location = new System.Drawing.Point(219, 207);

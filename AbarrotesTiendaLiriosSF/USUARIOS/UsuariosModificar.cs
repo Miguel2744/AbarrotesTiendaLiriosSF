@@ -33,7 +33,7 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
                 //genero mis variables auxiliares para recibir los datos de los textbox
                 String nombre = txtBuscar.Text;
                 //especifico los datos sobre mi conexion y se los evnio al objeto conexion de mysql
-                Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+                Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
                 Conexion.ConnectionString = Cadenaconexion;
 
                 //Creo un objeto comand el cual tendra el query de la instruccion de Insercion
@@ -76,7 +76,7 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
         {
             MySqlConnection Conexion = new MySqlConnection();
             String Cadenaconexion;
-            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
 
 
@@ -102,7 +102,7 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
             String newNombre = txtNombreNuevo.Text;
 
             //especifico los datos sobre mi conexion y se los evnio al objeto conexion de mysql
-            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
 
             //Creo un objeto comand el cual tendra el query de la instruccion de Insercion
@@ -160,7 +160,7 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
             String nombre = txtNombre.Text;
             String password = txtPass.Text;
             
-            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
             
             MySqlCommand comando1 = new MySqlCommand("delete from usuarios where nom_User=(@nombre) and Pass=(@pass)");

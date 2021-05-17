@@ -18,6 +18,35 @@ namespace AbarrotesTiendaLiriosSF.CLIENTES
         {
             InitializeComponent();
         }
+        public static void Solonumeros(KeyPressEventArgs pe)
+        {
+            if (char.IsDigit(pe.KeyChar))
+            {
+                pe.Handled = false;
+
+            }
+            else
+            {
+                pe.Handled = true;
+
+            }
+        }
+        public static void Sololetras(KeyPressEventArgs pe)
+        {
+            if (char.IsLetter(pe.KeyChar))
+            {
+                pe.Handled = false;
+
+            }
+            else if (char.IsControl(pe.KeyChar))
+            {
+                pe.Handled = false;
+            }
+            else
+            {
+                pe.Handled = true;
+            }
+        }
 
         private void ClienteNuevo_Load(object sender, EventArgs e)
         {
@@ -56,7 +85,7 @@ namespace AbarrotesTiendaLiriosSF.CLIENTES
                 Double saldo = Convert.ToDouble(txtSaldo.Text);
                 String descripcion = txtDescripcion.Text;
                 //especifico los datos sobre mi conexion y se los evnio al objeto conexion de mysql
-                Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+                Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
                 Conexion.ConnectionString = Cadenaconexion;
 
                 //Creo un objeto comand el cual tendra el query de la instruccion de Insercion
@@ -117,6 +146,37 @@ namespace AbarrotesTiendaLiriosSF.CLIENTES
 
 
             }
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ClienteNuevo.Solonumeros(e);
+
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ClienteNuevo.Sololetras(e);
+        }
+
+        private void txtAlias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ClienteNuevo.Sololetras(e);
+        }
+
+        private void txtSaldo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ClienteNuevo.Solonumeros(e);
+        }
+
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

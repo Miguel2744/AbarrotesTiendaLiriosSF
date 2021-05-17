@@ -21,6 +21,39 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
         {
             InitializeComponent();
         }
+        public ProductoConsultar()
+        {
+            InitializeComponent();
+        }
+        public static void Solonumeros(KeyPressEventArgs pe)
+        {
+            if (char.IsDigit(pe.KeyChar))
+            {
+                pe.Handled = false;
+
+            }
+            else
+            {
+                pe.Handled = true;
+
+            }
+        }
+        public static void Sololetras(KeyPressEventArgs pe)
+        {
+            if (char.IsLetter(pe.KeyChar))
+            {
+                pe.Handled = false;
+
+            }
+            else if (char.IsControl(pe.KeyChar))
+            {
+                pe.Handled = false;
+            }
+            else
+            {
+                pe.Handled = true;
+            }
+        }
 
         private void UsuarioNuevo_Load(object sender, EventArgs e)
         {
@@ -45,7 +78,7 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
                 String tipo = txtrol.Text;
 
                 //especifico los datos sobre mi conexion y se los evnio al objeto conexion de mysql
-                Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+                Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
                 Conexion.ConnectionString = Cadenaconexion;
 
                 //Creo un objeto comand el cual tendra el query de la instruccion de Insercion
@@ -99,6 +132,11 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            UsuarioNuevo.Sololetras(e);
         }
     }
 }

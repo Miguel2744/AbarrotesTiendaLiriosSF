@@ -18,12 +18,40 @@ namespace AbarrotesTiendaLiriosSF.PRODUCTOS
         {
             InitializeComponent();
         }
+        public static void Solonumeros(KeyPressEventArgs pe)
+        {
+            if (char.IsDigit(pe.KeyChar))
+            {
+                pe.Handled = false;
 
+            }
+            else
+            {
+                pe.Handled = true;
+
+            }
+        }
+        public static void Sololetras(KeyPressEventArgs pe)
+        {
+            if (char.IsLetter(pe.KeyChar))
+            {
+                pe.Handled = false;
+
+            }
+            else if (char.IsControl(pe.KeyChar))
+            {
+                pe.Handled = false;
+            }
+            else
+            {
+                pe.Handled = true;
+            }
+        }
         private void ProductoConsultar_Load(object sender, EventArgs e)
         {
             MySqlConnection Conexion = new MySqlConnection();
             String Cadenaconexion;
-            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
 
 
@@ -59,7 +87,7 @@ namespace AbarrotesTiendaLiriosSF.PRODUCTOS
                 //genero mis variables auxiliares para recibir los datos de los textbox
                 String nombre = txtBuscar.Text;
                 //especifico los datos sobre mi conexion y se los evnio al objeto conexion de mysql
-                Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+                Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
                 Conexion.ConnectionString = Cadenaconexion;
 
                 //Creo un objeto comand el cual tendra el query de la instruccion de Insercion
@@ -114,7 +142,7 @@ namespace AbarrotesTiendaLiriosSF.PRODUCTOS
             String Cadenaconexion;
             String nombre = txtNombre.Text;
 
-            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
 
             MySqlCommand comando1 = new MySqlCommand("delete from producto where nom_producto=(@nombre)");
@@ -158,7 +186,7 @@ namespace AbarrotesTiendaLiriosSF.PRODUCTOS
             String existencias = txtExistencias.Text;
 
             //especifico los datos sobre mi conexion y se los evnio al objeto conexion de mysql
-            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
 
             //Creo un objeto comand el cual tendra el query de la instruccion de Insercion
@@ -205,6 +233,36 @@ namespace AbarrotesTiendaLiriosSF.PRODUCTOS
                 MessageBox.Show("Se ha producido un error" + err + "");
             }
             Conexion.Close();
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ProductoConsultar.Sololetras(e);
+        }
+
+        private void txtMarca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ProductoConsultar.Sololetras(e);
+        }
+
+        private void txtTipoP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ProductoConsultar.Sololetras(e);
+        }
+
+        private void txtCosto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ProductoConsultar.Solonumeros(e);
+        }
+
+        private void txtExistencias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ProductoConsultar.Solonumeros(e);
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ProductoConsultar.Sololetras(e);
         }
     }
     }

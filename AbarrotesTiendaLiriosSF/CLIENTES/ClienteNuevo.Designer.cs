@@ -87,7 +87,7 @@
             // 
             // txtAlias
             // 
-            this.txtAlias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtAlias.BackColor = System.Drawing.Color.Silver;
             this.txtAlias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAlias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAlias.Location = new System.Drawing.Point(179, 151);
@@ -95,6 +95,7 @@
             this.txtAlias.Size = new System.Drawing.Size(426, 19);
             this.txtAlias.TabIndex = 680;
             this.txtAlias.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtAlias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAlias_KeyPress);
             // 
             // label1
             // 
@@ -120,7 +121,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtNombre.BackColor = System.Drawing.Color.Silver;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(179, 100);
@@ -128,6 +129,7 @@
             this.txtNombre.Size = new System.Drawing.Size(426, 19);
             this.txtNombre.TabIndex = 680;
             this.txtNombre.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // panel1
             // 
@@ -152,7 +154,7 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtTelefono.BackColor = System.Drawing.Color.Silver;
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(179, 201);
@@ -160,6 +162,7 @@
             this.txtTelefono.Size = new System.Drawing.Size(426, 19);
             this.txtTelefono.TabIndex = 680;
             this.txtTelefono.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // panel2
             // 
@@ -195,7 +198,7 @@
             // 
             // txtSaldo
             // 
-            this.txtSaldo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtSaldo.BackColor = System.Drawing.Color.Silver;
             this.txtSaldo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSaldo.Location = new System.Drawing.Point(179, 250);
@@ -203,6 +206,7 @@
             this.txtSaldo.Size = new System.Drawing.Size(426, 19);
             this.txtSaldo.TabIndex = 680;
             this.txtSaldo.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtSaldo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSaldo_KeyPress);
             // 
             // panel5
             // 
@@ -224,12 +228,14 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtDescripcion.BackColor = System.Drawing.Color.Silver;
             this.txtDescripcion.Location = new System.Drawing.Point(179, 297);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(426, 64);
             this.txtDescripcion.TabIndex = 682;
+            this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
+            this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
             // 
             // pictureBox1
             // 

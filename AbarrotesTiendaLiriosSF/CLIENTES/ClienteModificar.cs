@@ -22,7 +22,7 @@ namespace AbarrotesTiendaLiriosSF.CLIENTES
         {
             MySqlConnection Conexion = new MySqlConnection();
             String Cadenaconexion;
-            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
             
             
@@ -88,7 +88,7 @@ namespace AbarrotesTiendaLiriosSF.CLIENTES
                 //genero mis variables auxiliares para recibir los datos de los textbox
                 String nombre = comboBuscar.Text;
                 //especifico los datos sobre mi conexion y se los evnio al objeto conexion de mysql
-                Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+                Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
                 Conexion.ConnectionString = Cadenaconexion;
 
                 //Creo un objeto comand el cual tendra el query de la instruccion de Insercion
@@ -148,7 +148,7 @@ namespace AbarrotesTiendaLiriosSF.CLIENTES
             String Cadenaconexion;
             String nombre = txtNombre.Text;
 
-            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
 
             MySqlCommand comando1 = new MySqlCommand("delete from cliente where nombre=(@nombre)");
@@ -189,7 +189,7 @@ namespace AbarrotesTiendaLiriosSF.CLIENTES
             String saldo = txtSaldo.Text;
             String desc = txtDescripcion.Text;
             
-            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
             
             MySqlCommand comando1 = new MySqlCommand(

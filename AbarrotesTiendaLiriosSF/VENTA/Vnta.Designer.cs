@@ -93,6 +93,7 @@
             // 
             // numericUpDown2
             // 
+            this.numericUpDown2.BackColor = System.Drawing.Color.Silver;
             this.numericUpDown2.Location = new System.Drawing.Point(160, 96);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(415, 20);

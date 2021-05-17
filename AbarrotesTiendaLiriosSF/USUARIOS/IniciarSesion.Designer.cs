@@ -62,6 +62,7 @@
             // 
             // txtlogin
             // 
+            this.txtlogin.BackColor = System.Drawing.Color.Silver;
             this.txtlogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtlogin.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F);
             this.txtlogin.Location = new System.Drawing.Point(232, 356);
@@ -71,6 +72,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.Silver;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F);
             this.textBox1.Location = new System.Drawing.Point(232, 305);
