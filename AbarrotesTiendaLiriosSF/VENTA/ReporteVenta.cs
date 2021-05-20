@@ -13,35 +13,24 @@ namespace AbarrotesTiendaLiriosSF.VENTA
 {
     public partial class ReporteVenta : Form
     {
+        MySqlConnection Conexion = new MySqlConnection();
+        String Cadenaconexion;
+
         public ReporteVenta()
         {
             InitializeComponent();
-
-            //Iniciar conexion
-            MySqlConnection Conexion = new MySqlConnection();
-            //Variable de cadena de conexion
-            String Cadenaconexion;
-            //especifico los datos sobre mi conexion y se los evnio al objeto conexion de mysql
             Cadenaconexion = "server=localhost;uid=root;password=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
 
-            //Creo un objeto comand el cual tendra el query de la instruccion de Insercion
-            MySqlCommand comando1 = new MySqlCommand("select idRVenta,fecha,hora,articulos,monto_Venta,idVenta from rep_venta ;");
-            comando1.Connection = Conexion;
+            MySqlCommand commandobus = new MySqlCommand("select idRVenta,fecha,hora,articulos,monto_Venta,idVenta from rep_venta ;");
+            commandobus.Connection = Conexion;
             Conexion.Open();
-
-            MySqlDataReader myreader = comando1.ExecuteReader();
-            System.Text.Encoding decrio = System.Text.Encoding.ASCII;
-
-
-        /*    MySqlCommand comando2 = new MySqlCommand("select SUM(monto_Venta) from rep_venta;");
-            comando2.Connection = Conexion;
-            Conexion.Open();
-
-            MySqlDataReader myreader2 = comando2.ExecuteReader();
-            System.Text.Encoding decrio2 = System.Text.Encoding.ASCII;*/
-
-            //uso un try para abrir la conexion y ejecutar el query y el catch para cerrar la conexion
+            MySqlDataReader myreader = commandobus.ExecuteReader();
+            
+            //System.Text.Encoding decrio = System.Text.Encoding.ASCII;
+            /*MySqlCommand commandobus2 = new MySqlCommand("select SUM(monto_Venta) from rep_venta;");
+            commandobus2.Connection = Conexion;
+            MySqlDataReader myreader2 = commandobus.ExecuteReader();*/
 
             try
             {
@@ -60,8 +49,16 @@ namespace AbarrotesTiendaLiriosSF.VENTA
                 MessageBox.Show("Se ha producido un error" + err + "");
             }
             Conexion.Close();
+            commandobus = null;
+            myreader = null;
+            //------------------------------------------------
+            Cadenaconexion = "server=localhost;uid=root;password=root;database=Ab_Lirios";
+            Conexion.ConnectionString = Cadenaconexion;
 
-
+             commandobus = new MySqlCommand("select SUM(monto_Venta) from rep_venta;");
+            commandobus.Connection = Conexion;
+            Conexion.Open();
+             myreader = commandobus.ExecuteReader();
         }
 
         private void ReporteVenta_Load(object sender, EventArgs e)
