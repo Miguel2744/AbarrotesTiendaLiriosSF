@@ -54,5 +54,10 @@ namespace AbarrotesTiendaLiriosSF.PRODUCTOS
 
 
         }
+
+        private void ProductosAgotados_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -33,7 +33,7 @@ namespace AbarrotesTiendaLiriosSF.PRODUCTOS
                 Double costo = Convert.ToDouble(txtCosto.Text);
                 int existencias = Convert.ToInt32(txtExistencias.Text);
                 //especifico los datos sobre mi conexion y se los evnio al objeto conexion de mysql
-                Cadenaconexion = "server=localhost;uid=root;password=root;database=Ab_Lirios";
+                Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
                 Conexion.ConnectionString = Cadenaconexion;
 
                 //Creo un objeto comand el cual tendra el query de la instruccion de Insercion
@@ -234,6 +234,11 @@ namespace AbarrotesTiendaLiriosSF.PRODUCTOS
                 e.Handled = true;
                 MessageBox.Show("Solo se admiten datos numéricos", "validación de  números", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void ProductoNuevo_Load(object sender, EventArgs e)
+        {
+
         }
     }
     }

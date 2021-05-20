@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace AbarrotesTiendaLiriosSF
 {
@@ -61,33 +62,38 @@ namespace AbarrotesTiendaLiriosSF
 
         private void cONSULTARMODIFICARELIMINARUSUARIOToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (USUARIOS.IniciarSesion.val == true)
             AbrirFormEnPanel(new USUARIOS.UsuariosModificar());
         }
 
         private void aGREGARPRODUCTONUEVOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new PRODUCTOS.ProductoNuevo());
+            if (USUARIOS.IniciarSesion.val == true)
+                AbrirFormEnPanel(new PRODUCTOS.ProductoNuevo());
         }
 
         private void cONSULTARMODIFICARELIMINARToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            AbrirFormEnPanel(new PRODUCTOS.ProductoConsultar());
+            if (USUARIOS.IniciarSesion.val == true)
+                AbrirFormEnPanel(new PRODUCTOS.ProductoConsultar());
         }
 
         private void pRODUCTOSEXISTENTESToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new PRODUCTOS.PtoductosDisponibles());
+            if (USUARIOS.IniciarSesion.val == true)
+                AbrirFormEnPanel(new PRODUCTOS.PtoductosDisponibles());
         }
 
         private void pRODUCTOSAGOTADOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new PRODUCTOS.ProductosAgotados());
+            if (USUARIOS.IniciarSesion.val == true)
+                AbrirFormEnPanel(new PRODUCTOS.ProductosAgotados());
         }
 
         private void rEALIZARVENTAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new VENTA.Vnta());
+            if (USUARIOS.IniciarSesion.val == true)
+                AbrirFormEnPanel(new VENTA.Vnta());
         }
 
         private void uSUARIOSToolStripMenuItem_Click(object sender, EventArgs e)
@@ -97,19 +103,21 @@ namespace AbarrotesTiendaLiriosSF
 
         private void hISTORIALDEVENTAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new VENTA.ReporteVenta());
+            if (USUARIOS.IniciarSesion.val == true)
+                AbrirFormEnPanel(new VENTA.ReporteVenta());
         }
 
         private void aGREGARCLIENTEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            AbrirFormEnPanel(new CLIENTES.ClienteNuevo());
+            if (USUARIOS.IniciarSesion.val == true)
+                AbrirFormEnPanel(new CLIENTES.ClienteNuevo());
 
         }
 
         private void cONSULTARMODIFICARELIMINARCLIENTEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new CLIENTES.ClienteModificar());
+            if (USUARIOS.IniciarSesion.val == true)
+                AbrirFormEnPanel(new CLIENTES.ClienteModificar());
 
         }
 
@@ -129,6 +137,11 @@ namespace AbarrotesTiendaLiriosSF
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

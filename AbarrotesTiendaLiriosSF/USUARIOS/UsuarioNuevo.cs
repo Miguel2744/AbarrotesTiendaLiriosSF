@@ -78,7 +78,7 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
                 String tipo = txtrol.Text;
 
                 //especifico los datos sobre mi conexion y se los evnio al objeto conexion de mysql
-                Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
+                Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
                 Conexion.ConnectionString = Cadenaconexion;
 
                 //Creo un objeto comand el cual tendra el query de la instruccion de Insercion
