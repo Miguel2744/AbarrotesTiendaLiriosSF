@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvProdAgot = new System.Windows.Forms.DataGridView();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,7 +41,7 @@
             this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdAgot)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox3
@@ -64,21 +64,24 @@
             this.pictureBox1.TabIndex = 666;
             this.pictureBox1.TabStop = false;
             // 
-            // dataGridView1
+            // dgvProdAgot
             // 
+            this.dgvProdAgot.AllowUserToAddRows = false;
+            this.dgvProdAgot.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Silver;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProdAgot.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProdAgot.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgvProdAgot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProdAgot.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
             this.Marca,
             this.Tipo,
             this.Costo});
-            this.dataGridView1.Location = new System.Drawing.Point(72, 88);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(548, 357);
-            this.dataGridView1.TabIndex = 665;
+            this.dgvProdAgot.Location = new System.Drawing.Point(72, 88);
+            this.dgvProdAgot.Name = "dgvProdAgot";
+            this.dgvProdAgot.ReadOnly = true;
+            this.dgvProdAgot.Size = new System.Drawing.Size(548, 357);
+            this.dgvProdAgot.TabIndex = 665;
             // 
             // label20
             // 
@@ -104,23 +107,32 @@
             // 
             // Nombre
             // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Marca
             // 
+            this.Marca.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Marca.HeaderText = "Marca";
             this.Marca.Name = "Marca";
+            this.Marca.ReadOnly = true;
             // 
             // Tipo
             // 
+            this.Tipo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Tipo.HeaderText = "Tipo";
             this.Tipo.Name = "Tipo";
+            this.Tipo.ReadOnly = true;
             // 
             // Costo
             // 
+            this.Costo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Costo.HeaderText = "Costo";
             this.Costo.Name = "Costo";
+            this.Costo.ReadOnly = true;
             // 
             // ProductosAgotados
             // 
@@ -128,7 +140,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(677, 497);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvProdAgot);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.pictureBox1);
@@ -138,7 +150,7 @@
             this.Text = "ProductosAgotados";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdAgot)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,7 +160,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvProdAgot;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
