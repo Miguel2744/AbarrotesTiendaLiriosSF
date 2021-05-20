@@ -30,63 +30,42 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReporteVenta));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Existencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tb_RepVenta = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.idRVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Existencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VTotal = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_RepVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // tb_RepVenta
             // 
+            this.tb_RepVenta.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Silver;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
+            this.tb_RepVenta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tb_RepVenta.BackgroundColor = System.Drawing.Color.Silver;
+            this.tb_RepVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tb_RepVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idRVenta,
             this.Marca,
             this.Tipo,
             this.Costo,
-            this.Existencias});
-            this.dataGridView1.Location = new System.Drawing.Point(69, 107);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(546, 341);
-            this.dataGridView1.TabIndex = 686;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Column1";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Marca
-            // 
-            this.Marca.HeaderText = "Column1";
-            this.Marca.Name = "Marca";
-            // 
-            // Tipo
-            // 
-            this.Tipo.HeaderText = "Column1";
-            this.Tipo.Name = "Tipo";
-            // 
-            // Costo
-            // 
-            this.Costo.HeaderText = "Column1";
-            this.Costo.Name = "Costo";
-            // 
-            // Existencias
-            // 
-            this.Existencias.HeaderText = "Column1";
-            this.Existencias.Name = "Existencias";
+            this.Existencias,
+            this.Column1});
+            this.tb_RepVenta.Location = new System.Drawing.Point(24, 86);
+            this.tb_RepVenta.Name = "tb_RepVenta";
+            this.tb_RepVenta.Size = new System.Drawing.Size(642, 342);
+            this.tb_RepVenta.TabIndex = 686;
+            this.tb_RepVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label2
             // 
@@ -137,12 +116,54 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-3, 347);
+            this.pictureBox2.Location = new System.Drawing.Point(-3, 353);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(170, 149);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 696;
             this.pictureBox2.TabStop = false;
+            // 
+            // idRVenta
+            // 
+            this.idRVenta.HeaderText = "idRVenta";
+            this.idRVenta.Name = "idRVenta";
+            // 
+            // Marca
+            // 
+            this.Marca.HeaderText = "Fecha";
+            this.Marca.Name = "Marca";
+            // 
+            // Tipo
+            // 
+            this.Tipo.HeaderText = "Hora";
+            this.Tipo.Name = "Tipo";
+            // 
+            // Costo
+            // 
+            this.Costo.HeaderText = "Articulos";
+            this.Costo.Name = "Costo";
+            // 
+            // Existencias
+            // 
+            this.Existencias.HeaderText = "Monto_Venta";
+            this.Existencias.Name = "Existencias";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "idVenta";
+            this.Column1.Name = "Column1";
+            // 
+            // VTotal
+            // 
+            this.VTotal.AutoSize = true;
+            this.VTotal.BackColor = System.Drawing.Color.White;
+            this.VTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VTotal.Location = new System.Drawing.Point(612, 447);
+            this.VTotal.Name = "VTotal";
+            this.VTotal.Size = new System.Drawing.Size(48, 25);
+            this.VTotal.TabIndex = 697;
+            this.VTotal.Text = "000";
+            this.VTotal.Click += new System.EventHandler(this.VTotal_Click);
             // 
             // ReporteVenta
             // 
@@ -150,17 +171,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(693, 495);
+            this.Controls.Add(this.VTotal);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tb_RepVenta);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReporteVenta";
             this.Text = "ReporteVenta";
             this.Load += new System.EventHandler(this.ReporteVenta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_RepVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -169,16 +191,18 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Existencias;
+        private System.Windows.Forms.DataGridView tb_RepVenta;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idRVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Existencias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.Label VTotal;
     }
 }
