@@ -237,32 +237,168 @@ namespace AbarrotesTiendaLiriosSF.PRODUCTOS
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ProductoConsultar.Sololetras(e);
+            //condicion para solo números
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //para backspace
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //para que admita tecla de espacio
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //si no cumple nada de lo anterior que no lo deje pasar
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se admiten letras", "validación de texto",
+               MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void txtMarca_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ProductoConsultar.Sololetras(e);
+            //condicion para solo números
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //para backspace
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //para que admita tecla de espacio
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //si no cumple nada de lo anterior que no lo deje pasar
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se admiten letras", "validación de texto",
+               MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void txtTipoP_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ProductoConsultar.Sololetras(e);
+            //condicion para solo números
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //para backspace
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //para que admita tecla de espacio
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //si no cumple nada de lo anterior que no lo deje pasar
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se admiten letras", "validación de texto",
+               MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void txtCosto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ProductoConsultar.Solonumeros(e);
+            //condicion para solo números
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //para tecla backspace
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            /*verifica que pueda ingresar punto y también que solo pueda 
+           ingresar un punto*/
+            else if ((e.KeyChar == '.') && (!txtCosto.Text.Contains(".")))
+            {
+                e.Handled = false;
+            }
+            //si no se cumple nada de lo anterior entonces que no lo deje pasar
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se admiten datos numéricos", "validación de  números", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void txtExistencias_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ProductoConsultar.Solonumeros(e);
+            //condicion para solo números
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //para tecla backspace
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            /*verifica que pueda ingresar punto y también que solo pueda 
+           ingresar un punto*/
+            else if ((e.KeyChar == '.') && (!txtExistencias.Text.Contains(".")))
+            {
+                e.Handled = false;
+            }
+            //si no se cumple nada de lo anterior entonces que no lo deje pasar
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se admiten datos numéricos", "validación de  números", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProductoConsultar.Sololetras(e);
+        }
+
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //condicion para solo números
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //para backspace
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //para que admita tecla de espacio
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //si no cumple nada de lo anterior que no lo deje pasar
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se admiten letras", "validación de texto",
+               MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void txtExistencias_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }

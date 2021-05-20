@@ -21,10 +21,10 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
         {
             InitializeComponent();
         }
-        public ProductoConsultar()
-        {
-            InitializeComponent();
-        }
+       // public ProductoConsultar()
+        //{
+          //  InitializeComponent();
+       // }
         public static void Solonumeros(KeyPressEventArgs pe)
         {
             if (char.IsDigit(pe.KeyChar))
@@ -136,7 +136,28 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            UsuarioNuevo.Sololetras(e);
+            //condicion para solo números
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //para backspace
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //para que admita tecla de espacio
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            //si no cumple nada de lo anterior que no lo deje pasar
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se admiten letras", "validación de texto",
+               MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

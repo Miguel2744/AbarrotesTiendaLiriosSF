@@ -261,6 +261,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(434, 67);
             this.txtDescripcion.TabIndex = 688;
+            this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
             // 
             // label24
             // 
@@ -334,6 +335,7 @@
             this.txtExistencias.Name = "txtExistencias";
             this.txtExistencias.Size = new System.Drawing.Size(433, 19);
             this.txtExistencias.TabIndex = 695;
+            this.txtExistencias.TextChanged += new System.EventHandler(this.txtExistencias_TextChanged);
             this.txtExistencias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExistencias_KeyPress);
             // 
             // panel2

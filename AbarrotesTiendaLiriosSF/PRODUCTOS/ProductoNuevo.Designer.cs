@@ -106,6 +106,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(401, 84);
             this.txtDescripcion.TabIndex = 669;
+            this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
             // 
             // panel16
             // 
@@ -125,6 +126,7 @@
             this.txtExistencias.Name = "txtExistencias";
             this.txtExistencias.Size = new System.Drawing.Size(402, 19);
             this.txtExistencias.TabIndex = 662;
+            this.txtExistencias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExistencias_KeyPress);
             // 
             // panel15
             // 
@@ -144,6 +146,7 @@
             this.txtCosto.Name = "txtCosto";
             this.txtCosto.Size = new System.Drawing.Size(401, 19);
             this.txtCosto.TabIndex = 663;
+            this.txtCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCosto_KeyPress);
             // 
             // panel14
             // 
@@ -172,6 +175,8 @@
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(401, 19);
             this.txtMarca.TabIndex = 660;
+            this.txtMarca.TextChanged += new System.EventHandler(this.txtMarca_TextChanged);
+            this.txtMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMarca_KeyPress);
             // 
             // panel13
             // 
@@ -191,6 +196,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(401, 19);
             this.txtNombre.TabIndex = 659;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label24
             // 

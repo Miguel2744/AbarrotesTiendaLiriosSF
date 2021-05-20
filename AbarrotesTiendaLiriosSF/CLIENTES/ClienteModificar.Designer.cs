@@ -181,6 +181,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(432, 56);
             this.txtDescripcion.TabIndex = 701;
+            this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
             // 
             // panel2
             // 
@@ -218,6 +219,7 @@
             this.txtSaldo.Name = "txtSaldo";
             this.txtSaldo.Size = new System.Drawing.Size(432, 19);
             this.txtSaldo.TabIndex = 693;
+            this.txtSaldo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSaldo_KeyPress);
             // 
             // txtTelefono
             // 
@@ -228,6 +230,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(432, 19);
             this.txtTelefono.TabIndex = 694;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtNombre
             // 
@@ -238,6 +241,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(432, 19);
             this.txtNombre.TabIndex = 695;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtApodo
             // 
@@ -248,6 +252,7 @@
             this.txtApodo.Name = "txtApodo";
             this.txtApodo.Size = new System.Drawing.Size(432, 19);
             this.txtApodo.TabIndex = 696;
+            this.txtApodo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApodo_KeyPress);
             // 
             // label5
             // 
@@ -354,7 +359,7 @@
             // btnEliminarCliente
             // 
             this.btnEliminarCliente.Location = new System.Drawing.Point(321, 456);
-            this.btnEliminarCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarCliente.Name = "btnEliminarCliente";
             this.btnEliminarCliente.Size = new System.Drawing.Size(100, 21);
             this.btnEliminarCliente.TabIndex = 707;
@@ -365,7 +370,7 @@
             // btnGuardarCliente
             // 
             this.btnGuardarCliente.Location = new System.Drawing.Point(513, 456);
-            this.btnGuardarCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarCliente.Name = "btnGuardarCliente";
             this.btnGuardarCliente.Size = new System.Drawing.Size(100, 21);
             this.btnGuardarCliente.TabIndex = 706;

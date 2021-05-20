@@ -13,7 +13,7 @@ namespace AbarrotesTiendaLiriosSF.CONEXION
         public static MySqlConnection ObtenerConexion()
         {
 
-            MySqlConnection conectar = new MySqlConnection("Server=127.0.0.1; uid=root; pwd=root; Database=Ab_Lirios;");
+            MySqlConnection conectar = new MySqlConnection("Server=127.0.0.1; uid=root; Database=Ab_Lirios;");
 
             conectar.Open();
 
