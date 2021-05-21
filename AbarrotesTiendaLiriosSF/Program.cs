@@ -11,6 +11,8 @@ namespace AbarrotesTiendaLiriosSF
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
+        /// 
+        //Saludos terricolas !!
         [STAThread]
         static void Main()
         {
