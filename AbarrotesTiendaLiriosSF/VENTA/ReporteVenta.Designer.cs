@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReporteVenta));
             this.tb_RepVenta = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.idRVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Existencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VTotal = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txt_Total = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tb_RepVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -50,8 +50,8 @@
             // tb_RepVenta
             // 
             this.tb_RepVenta.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tb_RepVenta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tb_RepVenta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.tb_RepVenta.BackgroundColor = System.Drawing.Color.Silver;
             this.tb_RepVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tb_RepVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -66,6 +66,36 @@
             this.tb_RepVenta.Size = new System.Drawing.Size(642, 342);
             this.tb_RepVenta.TabIndex = 686;
             this.tb_RepVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // idRVenta
+            // 
+            this.idRVenta.HeaderText = "idRVenta";
+            this.idRVenta.Name = "idRVenta";
+            // 
+            // Marca
+            // 
+            this.Marca.HeaderText = "Fecha";
+            this.Marca.Name = "Marca";
+            // 
+            // Tipo
+            // 
+            this.Tipo.HeaderText = "Hora";
+            this.Tipo.Name = "Tipo";
+            // 
+            // Costo
+            // 
+            this.Costo.HeaderText = "Articulos";
+            this.Costo.Name = "Costo";
+            // 
+            // Existencias
+            // 
+            this.Existencias.HeaderText = "Monto_Venta";
+            this.Existencias.Name = "Existencias";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "idVenta";
+            this.Column1.Name = "Column1";
             // 
             // label2
             // 
@@ -107,11 +137,12 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(439, 451);
+            this.label4.Location = new System.Drawing.Point(424, 451);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(149, 21);
             this.label4.TabIndex = 693;
             this.label4.Text = "Venta total del dia";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox2
             // 
@@ -123,47 +154,17 @@
             this.pictureBox2.TabIndex = 696;
             this.pictureBox2.TabStop = false;
             // 
-            // idRVenta
+            // txt_Total
             // 
-            this.idRVenta.HeaderText = "idRVenta";
-            this.idRVenta.Name = "idRVenta";
-            // 
-            // Marca
-            // 
-            this.Marca.HeaderText = "Fecha";
-            this.Marca.Name = "Marca";
-            // 
-            // Tipo
-            // 
-            this.Tipo.HeaderText = "Hora";
-            this.Tipo.Name = "Tipo";
-            // 
-            // Costo
-            // 
-            this.Costo.HeaderText = "Articulos";
-            this.Costo.Name = "Costo";
-            // 
-            // Existencias
-            // 
-            this.Existencias.HeaderText = "Monto_Venta";
-            this.Existencias.Name = "Existencias";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "idVenta";
-            this.Column1.Name = "Column1";
-            // 
-            // VTotal
-            // 
-            this.VTotal.AutoSize = true;
-            this.VTotal.BackColor = System.Drawing.Color.White;
-            this.VTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VTotal.Location = new System.Drawing.Point(612, 447);
-            this.VTotal.Name = "VTotal";
-            this.VTotal.Size = new System.Drawing.Size(48, 25);
-            this.VTotal.TabIndex = 697;
-            this.VTotal.Text = "000";
-            this.VTotal.Click += new System.EventHandler(this.VTotal_Click);
+            this.txt_Total.AutoSize = true;
+            this.txt_Total.BackColor = System.Drawing.Color.White;
+            this.txt_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Total.Location = new System.Drawing.Point(612, 447);
+            this.txt_Total.Name = "txt_Total";
+            this.txt_Total.Size = new System.Drawing.Size(48, 25);
+            this.txt_Total.TabIndex = 697;
+            this.txt_Total.Text = "000";
+            this.txt_Total.Click += new System.EventHandler(this.VTotal_Click);
             // 
             // ReporteVenta
             // 
@@ -171,7 +172,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(693, 495);
-            this.Controls.Add(this.VTotal);
+            this.Controls.Add(this.txt_Total);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
@@ -203,6 +204,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Existencias;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.Label VTotal;
+        private System.Windows.Forms.Label txt_Total;
     }
 }

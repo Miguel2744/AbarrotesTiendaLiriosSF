@@ -27,10 +27,6 @@ namespace AbarrotesTiendaLiriosSF.VENTA
             Conexion.Open();
             MySqlDataReader myreader = commandobus.ExecuteReader();
             
-            //System.Text.Encoding decrio = System.Text.Encoding.ASCII;
-            /*MySqlCommand commandobus2 = new MySqlCommand("select SUM(monto_Venta) from rep_venta;");
-            commandobus2.Connection = Conexion;
-            MySqlDataReader myreader2 = commandobus.ExecuteReader();*/
 
             try
             {
@@ -52,13 +48,13 @@ namespace AbarrotesTiendaLiriosSF.VENTA
             commandobus = null;
             myreader = null;
             //------------------------------------------------
-            Cadenaconexion = "server=localhost;uid=root;password=root;database=Ab_Lirios";
+           /* Cadenaconexion = "server=localhost;uid=root;password=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
 
              commandobus = new MySqlCommand("select SUM(monto_Venta) from rep_venta;");
             commandobus.Connection = Conexion;
             Conexion.Open();
-             myreader = commandobus.ExecuteReader();
+             myreader = commandobus.ExecuteReader();*/
         }
 
         private void ReporteVenta_Load(object sender, EventArgs e)
@@ -84,6 +80,40 @@ namespace AbarrotesTiendaLiriosSF.VENTA
         private void VTotal_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+          /*  Sqlcommand comando = new Sqlcommand("select SUM(monto_Venta) from rep_venta;", conexion);
+            conexion.Open();
+            SqlDataReader valor = comando.ExecuteReader();*/
+            Cadenaconexion = "server=localhost;uid=root;password=root;database=Ab_Lirios";
+            Conexion.ConnectionString = Cadenaconexion;
+
+            MySqlCommand commandobus = new MySqlCommand("select SUM(monto_Venta) from rep_venta;");
+            commandobus.Connection = Conexion;
+            Conexion.Open();
+            MySqlDataReader myreader = commandobus.ExecuteReader();
+
+
+            try
+            {
+                if (myreader.HasRows)
+                {
+                    while (myreader.Read())
+                    {
+                    txt_Total.Text = myreader["SUM(monto_Venta)"].ToString();
+                        //tb_RepVenta.Rows.Add(myreader[0], myreader[1], myreader[2], myreader[3], myreader[4], myreader[5]);
+                        // int var = Convert.ToInt32(comando2.ExecuteScalar);
+                    }
+                }
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Se ha producido un error" + err + "");
+            }
+            Conexion.Close();
         }
     }
 }
