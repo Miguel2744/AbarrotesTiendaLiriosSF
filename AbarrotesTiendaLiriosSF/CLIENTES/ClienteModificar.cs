@@ -361,5 +361,52 @@ namespace AbarrotesTiendaLiriosSF.CLIENTES
                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAbonar_Click(object sender, EventArgs e)
+        {
+            MySqlConnection Conexion = new MySqlConnection();
+            String Cadenaconexion;
+            String abono = txtAbonar.Text;
+            String nombre = txtNombre.Text;
+            String apodo = txtApodo.Text;
+
+            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Conexion.ConnectionString = Cadenaconexion;
+
+            MySqlCommand comando1 = new MySqlCommand(
+            "update cliente set saldo=saldo-(@saldo) where nombre=(@nombre) and alias=(@apodo)");
+            comando1.Connection = Conexion;
+
+            MySqlParameter parametro1 = new MySqlParameter();
+            parametro1.ParameterName = "@nombre";
+            parametro1.Value = nombre;
+            MySqlParameter parametro2 = new MySqlParameter();
+            parametro2.ParameterName = "@apodo";
+            parametro2.Value = apodo;
+            MySqlParameter parametro4 = new MySqlParameter();
+            parametro4.ParameterName = "@saldo";
+            parametro4.Value = abono;
+
+            comando1.Parameters.Add(parametro1);
+            comando1.Parameters.Add(parametro2);
+            comando1.Parameters.Add(parametro4);
+
+            try
+            {
+                Conexion.Open();
+                comando1.ExecuteNonQuery();
+                MessageBox.Show("Datos modificados con exito");
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Se ha producido un error" + err + "");
+            }
+            Conexion.Close();
+        }
     }
 }
