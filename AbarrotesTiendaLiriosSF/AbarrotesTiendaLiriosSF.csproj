@@ -33,7 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLIENTES\Cliente.cs" />
     <Compile Include="CLIENTES\ClienteModificar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +120,7 @@
     <Compile Include="USUARIOS\UsuariosModificar.Designer.cs">
       <DependentUpon>UsuariosModificar.cs</DependentUpon>
     </Compile>
+    <Compile Include="VENTA\producto.cs" />
     <Compile Include="VENTA\ReporteVenta.cs">
       <SubType>Form</SubType>
     </Compile>
