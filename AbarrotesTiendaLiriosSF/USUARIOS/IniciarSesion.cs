@@ -28,11 +28,14 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
         }
         
         private void button2_Click(object sender, EventArgs e)
+
         {
+
+
             String nombre = txtUsuario.Text;
             String clave = txtPass.Text;
 
-            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
             MySqlCommand commandobus = new MySqlCommand("Select nom_User, Pass from usuarios where nom_User='" + nombre + "' and Pass='" + clave + "'");
             commandobus.Connection = Conexion;
@@ -45,7 +48,12 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
                 {
                     if (myreader.GetString(0)==nombre&&myreader.GetString(1)==clave)
                     {
-                        MessageBox.Show("Datos correctos, Bienvenido");
+
+                        MessageBox.Show("Datos correctos, Bienvenido " + ( txtUsuario.Text));
+                       // USUARIOS.UsuariosModificar form = new USUARIOS.UsuariosModificar();
+                        //VENTA.Vnta form = new VENTA.Vnta();
+                        //form.Show();
+                        this.Hide();
                          val = true;
                     }
                 }

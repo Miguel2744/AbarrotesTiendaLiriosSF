@@ -85,7 +85,7 @@ namespace AbarrotesTiendaLiriosSF.CLIENTES
                 Double saldo = Convert.ToDouble(txtSaldo.Text);
                 String descripcion = txtDescripcion.Text;
                 //especifico los datos sobre mi conexion y se los evnio al objeto conexion de mysql
-                Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+                Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
                 Conexion.ConnectionString = Cadenaconexion;
 
                 //Creo un objeto comand el cual tendra el query de la instruccion de Insercion
@@ -136,6 +136,12 @@ namespace AbarrotesTiendaLiriosSF.CLIENTES
                     Conexion.Open();
                     comando1.ExecuteNonQuery();
                     MessageBox.Show("Bien echo ya insertamos datos!!!", "Conectado");
+
+                    txtNombre.Clear();
+                    txtSaldo.Clear();
+                    txtTelefono.Clear();
+                    txtAlias.Clear();
+                    txtDescripcion.Clear();
                 }
                 catch (Exception err)
                 {

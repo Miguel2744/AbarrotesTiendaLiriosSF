@@ -14,6 +14,8 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
 {
     public partial class UsuariosModificar : Form
     {
+        MySqlConnection Conexion = new MySqlConnection();
+        String Cadenaconexion;
         public UsuariosModificar()
         {
             InitializeComponent();
@@ -33,7 +35,7 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
                 //genero mis variables auxiliares para recibir los datos de los textbox
                 String nombre = txtBuscar.Text;
                 //especifico los datos sobre mi conexion y se los evnio al objeto conexion de mysql
-                Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+                Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
                 Conexion.ConnectionString = Cadenaconexion;
 
                 //Creo un objeto comand el cual tendra el query de la instruccion de Insercion
@@ -76,7 +78,7 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
         {
             MySqlConnection Conexion = new MySqlConnection();
             String Cadenaconexion;
-            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
 
 
@@ -102,7 +104,7 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
             String newNombre = txtNombreNuevo.Text;
 
             //especifico los datos sobre mi conexion y se los evnio al objeto conexion de mysql
-            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
 
             //Creo un objeto comand el cual tendra el query de la instruccion de Insercion
@@ -138,6 +140,10 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
                 Conexion.Open();
                 comando1.ExecuteNonQuery();
                 MessageBox.Show("Datos modificados con exito");
+                txtNombre.Clear();
+                txtPass.Clear();
+                txtNombreNuevo.Clear();
+                txtPassNueva.Clear();
             }
             catch (Exception err)
             {
@@ -160,7 +166,7 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
             String nombre = txtNombre.Text;
             String password = txtPass.Text;
             
-            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
+            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
             
             MySqlCommand comando1 = new MySqlCommand("delete from usuarios where nom_User=(@nombre) and Pass=(@pass)");
@@ -175,6 +181,17 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
             parametro2.Value = password;
             comando1.Parameters.Add(parametro1);
             comando1.Parameters.Add(parametro2);
+          
+         
+            txtNombreNuevo.Clear();
+            txtPassNueva.Clear();
+           
+
+
+
+
+            return;
+
 
 
             if (opcion == DialogResult.Yes)
@@ -264,6 +281,25 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
         }
 
         private void txtPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void comboRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
+            Conexion.ConnectionString = Cadenaconexion;
+            MySqlCommand command = new MySqlCommand("Select * from usuarios", Conexion);
+            adapter.SelectCommand = command;
+
+        }
+
+        private void txtBuscar_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
