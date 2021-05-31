@@ -317,7 +317,9 @@ namespace AbarrotesTiendaLiriosSF.VENTA
                 cantidad_productos = 0;
                 montoTotal = 0;
                 label6.Text = "0.00";
+                txtrol.Items.Clear();
                 cargarCliente();
+                cargarProductos();
                 txtrol.Text = "Selecciona un cliente existente";
 
                 MessageBox.Show("Venta regristrada existosamente");
