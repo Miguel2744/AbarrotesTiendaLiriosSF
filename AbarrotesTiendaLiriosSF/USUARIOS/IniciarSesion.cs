@@ -35,7 +35,7 @@ namespace AbarrotesTiendaLiriosSF.USUARIOS
             String nombre = txtUsuario.Text;
             String clave = txtPass.Text;
 
-            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
+            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
             MySqlCommand commandobus = new MySqlCommand("Select nom_User, Pass from usuarios where nom_User='" + nombre + "' and Pass='" + clave + "'");
             commandobus.Connection = Conexion;

@@ -19,7 +19,7 @@ namespace AbarrotesTiendaLiriosSF.VENTA
         public ReporteVenta()
         {
             InitializeComponent();
-            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
+            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
 
             MySqlCommand commandobus = new MySqlCommand("select idRVenta,fecha,hora,articulos,monto_Venta,idVenta from rep_venta ;");
@@ -87,7 +87,7 @@ namespace AbarrotesTiendaLiriosSF.VENTA
           /*  Sqlcommand comando = new Sqlcommand("select SUM(monto_Venta) from rep_venta;", conexion);
             conexion.Open();
             SqlDataReader valor = comando.ExecuteReader();*/
-            Cadenaconexion = "server=localhost;uid=root;database=Ab_Lirios";
+            Cadenaconexion = "server=localhost;uid=root;pwd=root;database=Ab_Lirios";
             Conexion.ConnectionString = Cadenaconexion;
 
             MySqlCommand commandobus = new MySqlCommand("select SUM(monto_Venta) from rep_venta;");
